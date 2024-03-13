@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background: linear-gradient(to left,#0c1286,#59f6f1);
+    overflow-x: hidden;
+}
+nav{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li{
+    display: inline-block;
+    flex-direction: row;
+    padding: 3px 3px 0px 3px;
+    margin: 10px;
+    list-style: none;
+}
+nav ul li a img{
+    width: 40px;
+    border-radius: 30px;
+}
+nav ul li:hover{
+    background-color: #52d2d2;
+    transition: 1.8s;
+    border-radius: 50px;
+}
+.titulo{
+    margin: 0;
+    padding: 0;
+}
+.titulo video{
+    width: 100% ;
+}
+
+
+.titulo h1{
+    font-size: 30px;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: rgba(255, 255, 255, 0.845); 
+}
+.tarjetas h2{
+    font-size: 30px;
+    text-align: center;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px ;
+    color: white;
+    text-shadow: 0px 2px 4px red;
+}
+.parrafo{
+    background: radial-gradient(yellow,red);
+    -webkit-text-fill-color: transparent;
+    color: tomato;  
+}
+/* TITULO Y FONDO DE SERVICIO */
+.servicios h2{
+    text-align: center;
+    font-size: 40px;
+    background: url(/video/Servicios1.gif);
+    padding: 100px 50px ;
+    background-size: 100% 100%;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    color: #000 ; 
+    background-repeat: no-repeat;
+    text-shadow: blue 3px 3px 4px;
+}
+.productos h2{
+    text-align: center;
+    font-size: 40px;
+    background: url(/video/Productos.gif);
+    padding: 100px 50px ;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: rgba(255, 255, 255, 0.845); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/* Tarjetas de servicios */
+.tarjetas-servicios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.tarjetas-servicios img{
+    width: 90%;
+    height: 22vh;
+    object-fit: cover;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+}
+.tarjetas-servicios h3{
+    color: white;
+}
+.tarjetas-servicios button{
+    border-radius: 10px;
+    border-style: none;
+    padding: 3px;
+    margin: 3px 0 6px;
+    color: white;
+    background-color: black;
+}
+.tarjetas-servicios section{
+    display: inline-block;
+    text-align: center;
+    border: solid 1px black;
+    margin: 15px 1px ;
+    border-radius: 20px;
+    background: linear-gradient(black, blue);
+
+}
+/* FIN Tarjetas de servicios */
+.tarjetas-productos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+.tarjetas-productos img{
+    width: 90%;
+    height: 22vh;
+    object-fit: cover;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 20px;
+}
+.tarjetas-productos h3{
+    color: white;
+}
+.tarjetas-productos button{
+    border-radius: 10px;
+    border-style: none;
+    padding: 3px;
+    margin: 3px 0 6px;
+    color: white;
+    background-color: black;
+}
+.tarjetas-productos section{
+    display: inline-block;
+    text-align: center;
+    border: solid 1px black;
+    margin: 15px 1px ;
+    border-radius: 20px;
+    background: linear-gradient(black, blue);
+
+}
+/* Corte para ir al footer */
+.game-over{
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+.game-over img{
+    height: 200px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 40%;
+}
+footer{
+    overflow-x: hidden;
+    background-color: white;
+    border-top: #000 solid 1px;
+    position: relative;
+}
+/*?---------CONTACTO--------- */
+main{
+    text-align: center;
+}
+main h1{
+    color: #fff;
+    background-color: #000;
+    display: block;
+    margin: 3px 0px ;
+}
+.formulario{
+    background-color: #aaa;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    border: #000 1px solid;
+    margin: 50px;
+}
