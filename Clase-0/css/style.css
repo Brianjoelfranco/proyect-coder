@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Micro+5&family=Sixtyfour&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,20 +9,59 @@
 }
 
 body{
-    background: linear-gradient(to left,#0c1286,#59f6f1);
+    background: linear-gradient(to left,#000000ea,#59f6f1);
     overflow-x: hidden;
 }
+body::-webkit-scrollbar {
+    width: 4px;               /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.9);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: transparent;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px double rgba(133, 255, 243, 0.83);  /* creates padding around scroll thumb */
+}
+header{
+    position: sticky;
+    top: 0px;
+}
+.header-index{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+}
 nav{
-    background-color: #fff;
+    font-family: "Sixtyfour", sans-serif;
+    font-style: normal;
+    font-size: 10px;
+    color: #44fdfa;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: static;
+    z-index: 1;
+    top: 0px;
+    width: 100%;
+}
+.logo{
+    width: 70px;
+    border: 2px solid rgba(124, 249, 236, 0.678);
+    border-radius: 50px;
+    margin: 1px 5px;
+    box-shadow: 0 0 5px 2px rgb(115, 244, 242);
 }
 nav ul li{
     display: inline-block;
     flex-direction: row;
-    padding: 3px 3px 0px 3px;
-    margin: 10px;
+    padding: 3px 3px 1px 3px;
+    margin: 5px;
     list-style: none;
 }
 nav ul li a img{
@@ -31,21 +73,36 @@ nav ul li:hover{
     transition: 1.8s;
     border-radius: 50px;
 }
+/*?-----------INDEX----------- */
 .titulo{
+    display: flex;
     margin: 0;
     padding: 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .titulo video{
-    width: 100% ;
+    width: 100%;
+    position: static;
+}
+.titulo img{
+    position: absolute;
+    width: 9vh;
+    margin-top: 40%;
+    border-radius: 50px;
 }
 
-
 .titulo h1{
-    font-size: 30px;
+    font-size: 5vh;
     text-align: center;
+    font-family: "Sixtyfour", sans-serif;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-    color: rgba(255, 255, 255, 0.845); 
+    color: rgba(255, 255, 255, 0.8); 
+    position: absolute;
+
 }
 .tarjetas h2{
     font-size: 30px;
@@ -60,135 +117,216 @@ nav ul li:hover{
     -webkit-text-fill-color: transparent;
     color: tomato;  
 }
-/* TITULO Y FONDO DE SERVICIO */
-.servicios h2{
+/* Subtitulos */
+.servicios h2,.productos h2,.subtitulo-nosotros h2{
+    font-family: "Sixtyfour", sans-serif;
     text-align: center;
-    font-size: 40px;
-    background: url(/video/Servicios1.gif);
-    padding: 100px 50px ;
-    background-size: 100% 100%;
+    font-size: 5vh;
+    padding-top: 5px;
+    color: #fff;
+    -webkit-text-stroke-color: #000;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff;
-    color: #000 ; 
-    background-repeat: no-repeat;
-    text-shadow: blue 3px 3px 4px;
-}
-.productos h2{
-    text-align: center;
-    font-size: 40px;
-    background: url(/video/Productos.gif);
-    padding: 100px 50px ;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    color: rgba(255, 255, 255, 0.845); 
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background: rgba(0, 0, 0, 0.3);
+    
 }
 /* Tarjetas de servicios */
-.tarjetas-servicios{
+.tarjetas-servicios,.tarjetas-productos{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    flex-wrap: wrap;
 }
-.tarjetas-servicios img{
+.tarjetas-productos img,.tarjetas-servicios img{
     width: 90%;
     height: 22vh;
     object-fit: cover;
-    margin: 5px;
-    padding: 5px;
+    margin: 9px;
+    padding: 0px;
     border-radius: 20px;
-    background-repeat: no-repeat;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    
 }
-.tarjetas-servicios h3{
+
+.tarjetas-servicios h3,.tarjetas-productos h3{
     color: white;
 }
-.tarjetas-servicios button{
+
+.tarjetas-productos button, .tarjetas-servicios button{
     border-radius: 10px;
     border-style: none;
+    width: fit-content;
     padding: 3px;
-    margin: 3px 0 6px;
+    margin: 3px 0 3px;
     color: white;
     background-color: black;
+    box-shadow: 0px 0px 3px 2px#f7e469 ;
 }
-.tarjetas-servicios section{
-    display: inline-block;
+
+.tarjetas-productos section,.tarjetas-servicios section{
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: center;
     border: solid 1px black;
+    height: 220px;
+    width: 200px;
     margin: 15px 1px ;
     border-radius: 20px;
-    background: linear-gradient(black, blue);
+    background: rgba(255, 255, 255, 0.3);
 
 }
+
 /* FIN Tarjetas de servicios */
-.tarjetas-productos{
+/* Nosotros  */
+.subtitulo-nosotros{
+    border-bottom: solid 1px #000;
+}
+.subtitulo-nosotros h2{
+    border-bottom: solid 1px #000;
+}
+.parrafo1,.parrafo2{
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: white;
 }
-.tarjetas-productos img{
-    width: 90%;
-    height: 22vh;
-    object-fit: cover;
-    margin: 5px;
-    padding: 5px;
-    border-radius: 20px;
+.parrafo1 img,.parrafo2 img{
+    width: 50%;
+    border: solid 1px rgba(0, 0, 0, 1);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 1px #000;
+    margin: 5px 5px;
 }
-.tarjetas-productos h3{
+.parrafo1 p,.parrafo2 p{
+    font-size: 3vh;
+    margin: 15px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0px 30px 30px;
+    color:  rgb(132, 244, 229);
+    border: #000 solid 1px;
+    box-shadow: 0px 0px 3px 3px rgb(132, 244, 229);
+}
+.parrafo2 p{
+    border-radius: 30px 0px 30px 30px;
+}
+.parrafo2 a{
     color: white;
-}
-.tarjetas-productos button{
-    border-radius: 10px;
-    border-style: none;
-    padding: 3px;
-    margin: 3px 0 6px;
-    color: white;
-    background-color: black;
-}
-.tarjetas-productos section{
-    display: inline-block;
-    text-align: center;
-    border: solid 1px black;
-    margin: 15px 1px ;
-    border-radius: 20px;
-    background: linear-gradient(black, blue);
-
 }
 /* Corte para ir al footer */
 .game-over{
+    display: flex;
     text-align: center;
     margin: 0px;
     padding: 0px;
+    width: 100%;
+    height: 15vh;
 }
 .game-over img{
-    height: 200px;
+    width: 25%;
     margin: 0px;
     padding: 0px;
-    border-radius: 40%;
 }
 footer{
     overflow-x: hidden;
-    background-color: white;
+    color: whitesmoke;
+    background-color: rgb(0, 0, 0);
     border-top: #000 solid 1px;
     position: relative;
 }
-/*?---------CONTACTO--------- */
-main{
-    text-align: center;
+footer a{
+    color: whitesmoke;
 }
-main h1{
+/*?---------CONTACTO--------- */
+.contacto{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.contacto h1{
     color: #fff;
-    background-color: #000;
-    display: block;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 0.8px;
+    font-family: "Sixtyfour", sans-serif;
+    font-size: 4vh;
+    background: rgba(0, 0, 0, 0.3);
     margin: 3px 0px ;
+    padding: 5px ;
+    width: 100%;
+    overflow-x: hidden;
 }
 .formulario{
-    background-color: #aaa;
+    background: rgba(255, 255, 255, 0.1);
     color: white;
-    display: inline-block;
+    display: flex;
     text-align: center;
     padding: 20px;
-    border: #000 1px solid;
+    border: rgba(255, 255, 255, 0.3)  1px solid;
     margin: 50px;
+    overflow-x: hidden;
+}
+.formulario input{
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom: #000 solid 1.5px;
+    border-radius: 10px;
+    width: 100%;
+    padding: 5px;
+    margin: 3px;
+}
+.formulario label{
+    color: black;
+}
+.genero{
+    display: flex;
+}
+/*? -----------SERVICIOS--------- */
+
+.tarjetas-servicios-servicios{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.tarjetas-servicios-servicios section{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    border: solid 1px black;
+    height: 300px;
+    width: 95%;
+    margin: 15px 15px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+}
+.tarjetas-servicios-servicios img{
+    width: 50%;
+    height: 90%;
+    object-fit: cover;
+    margin: 9px;
+    padding: 0px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    
+}
+.tarjetas-servicios-servicios button{
+    border-radius: 10px;
+    border-style: none;
+    width: fit-content;
+    padding: 3px;
+    margin: 3px 0 3px;
+    color: white;
+    background-color: black;
+    box-shadow: 0px 0px 3px 2px#f7e469 ;
+}
+
+.tarjetas-main h3,.tarjetas-main p{
+    padding-bottom: 30px;
 }
